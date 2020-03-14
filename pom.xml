@@ -4,13 +4,19 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>org.gwtproject</groupId>
+	<parent>
+		<groupId>org.jresearch</groupId>
+		<artifactId>org.jresearch.pom</artifactId>
+		<version>29-SNAPSHOT</version>
+	</parent>
+
+    <groupId>org.jresearch.gwtproject</groupId>
     <artifactId>gwt-editors-parent</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <name>GWT Editors Parent</name>
-    <description></description>
+    <description>GWT Editors Parent</description>
     <url>https://github.com/gwtproject/gwt-editor</url>
     <inceptionYear>2018</inceptionYear>
     <organization>
@@ -33,11 +39,12 @@
         </developer>
     </developers>
 
-    <scm>
-        <connection>scm:git:git://github.com/gwtproject/gwt-editors.git</connection>
-        <developerConnection>scm:git:ssh://github.com/gwtproject/gwt-editors.git</developerConnection>
-        <url>https://github.com/gwtproject/gwt-editors/tree/master</url>
-    </scm>
+	<scm>
+		<developerConnection>scm:hg:ssh://hth@helixteamhub.cloud/JRS/projects/domino/repositories/mercurial/gwt-editors</developerConnection>
+		<connection>scm:hg:https://stasjresearchorg@helixteamhub.cloud/JRS/projects/domino/repositories/mercurial/gwt-editors</connection>
+		<url>https://helixteamhub.cloud/JRS/projects/domino/repositories/gwt-editors/tree/default</url>
+	  <tag>HEAD</tag>
+  </scm>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -52,18 +59,18 @@
 
     <dependencyManagement>
         <dependencies>
-            <dependency>
+            <!-- <dependency>
                 <groupId>com.google.gwt</groupId>
                 <artifactId>gwt-user</artifactId>
                 <version>${gwt.version}</version>
                 <scope>test</scope>
-            </dependency>
-            <dependency>
+            </dependency> -->
+            <!-- <dependency>
                 <groupId>com.google.gwt</groupId>
                 <artifactId>gwt-dev</artifactId>
                 <version>${gwt.version}</version>
                 <scope>test</scope>
-            </dependency>
+            </dependency> -->
             <dependency>
                 <groupId>org.gwtproject.dom</groupId>
                 <artifactId>gwt-dom</artifactId>
@@ -74,34 +81,34 @@
                 <artifactId>gwt-event</artifactId>
                 <version>HEAD-SNAPSHOT</version>
             </dependency>
-            <dependency>
+            <!-- <dependency>
                 <groupId>org.gwtproject.event</groupId>
                 <artifactId>gwt-event</artifactId>
                 <version>HEAD-SNAPSHOT</version>
                 <classifier>sources</classifier>
-            </dependency>
-            <dependency>
+            </dependency> -->
+            <!-- <dependency>
                 <groupId>junit</groupId>
                 <artifactId>junit</artifactId>
                 <version>4.12</version>
                 <scope>test</scope>
-            </dependency>
-            <dependency>
+            </dependency> -->
+            <!-- <dependency>
                 <groupId>javax.validation</groupId>
                 <artifactId>validation-api</artifactId>
                 <version>1.0.0.GA</version>
-            </dependency>
-            <dependency>
+            </dependency> -->
+            <!-- <dependency>
                 <groupId>javax.validation</groupId>
                 <artifactId>validation-api</artifactId>
                 <version>1.0.0.GA</version>
                 <classifier>sources</classifier>
-            </dependency>
+            </dependency> -->
         </dependencies>
     </dependencyManagement>
 
     <build>
-        <pluginManagement>
+        <!-- <pluginManagement>
             <plugins>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
@@ -112,23 +119,23 @@
                         <target>${maven.compiler.target}</target>
                     </configuration>
                 </plugin>
-                <!--<plugin>-->
-                <!--<groupId>org.apache.maven.plugins</groupId>-->
-                <!--<artifactId>maven-javadoc-plugin</artifactId>-->
-                <!--<version>3.0.1</version>-->
-                <!--<configuration>-->
-                <!--<failOnWarnings>false</failOnWarnings>-->
-                <!--<failOnError>false</failOnError>-->
-                <!--</configuration>-->
-                <!--<executions>-->
-                <!--<execution>-->
-                <!--<id>attach-javadocs</id>-->
-                <!--<goals>-->
-                <!--<goal>jar</goal>-->
-                <!--</goals>-->
-                <!--</execution>-->
-                <!--</executions>-->
-                <!--</plugin>-->
+                <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>3.0.1</version>
+                <configuration>
+                <failOnWarnings>false</failOnWarnings>
+                <failOnError>false</failOnError>
+                </configuration>
+                <executions>
+                <execution>
+                <id>attach-javadocs</id>
+                <goals>
+                <goal>jar</goal>
+                </goals>
+                </execution>
+                </executions>
+                </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-source-plugin</artifactId>
@@ -189,7 +196,7 @@
                     </executions>
                 </plugin>
             </plugins>
-        </pluginManagement>
+        </pluginManagement> -->
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -199,22 +206,22 @@
             <!--<groupId>org.apache.maven.plugins</groupId>-->
             <!--<artifactId>maven-javadoc-plugin</artifactId>-->
             <!--</plugin>-->
-            <plugin>
+            <!-- <plugin>
                 <groupId>com.coveo</groupId>
                 <artifactId>fmt-maven-plugin</artifactId>
-            </plugin>
-            <plugin>
+            </plugin> -->
+            <!-- <plugin>
                 <groupId>com.mycila</groupId>
                 <artifactId>license-maven-plugin</artifactId>
-            </plugin>
-            <plugin>
+            </plugin> -->
+            <!-- <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-source-plugin</artifactId>
-            </plugin>
+            </plugin> -->
         </plugins>
     </build>
 
-    <repositories>
+    <!-- <repositories>
         <repository>
             <id>vertispan-snapshots</id>
             <name>Vertispan Snapshots</name>
@@ -229,9 +236,9 @@
                 <checksumPolicy>fail</checksumPolicy>
             </snapshots>
         </repository>
-    </repositories>
+    </repositories> -->
 
-    <distributionManagement>
+    <!-- <distributionManagement>
         <snapshotRepository>
             <id>ossrh</id>
             <url>https://oss.sonatype.org/content/repositories/snapshots</url>
@@ -240,10 +247,10 @@
             <id>ossrh</id>
             <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
         </repository>
-    </distributionManagement>
+    </distributionManagement> -->
 
-    <profiles>
-        <!-- release profile to create sources, javadoc, and sign all artifacts before uploading -->
+    <!-- <profiles>
+        release profile to create sources, javadoc, and sign all artifacts before uploading
         <profile>
             <id>release</id>
             <build>
@@ -261,7 +268,7 @@
                             </execution>
                         </executions>
                     </plugin>
-                    <!-- see http://central.sonatype.org/pages/working-with-pgp-signatures.html for more detail -->
+                    see http://central.sonatype.org/pages/working-with-pgp-signatures.html for more detail
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-gpg-plugin</artifactId>
@@ -279,7 +286,7 @@
                 </plugins>
             </build>
         </profile>
-    </profiles>
+    </profiles> -->
 
     <modules>
         <module>editors-processor</module>
