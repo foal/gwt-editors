@@ -27,7 +27,7 @@
             <scope>test</scope>
         </dependency> -->
         <dependency>
-            <groupId>org.gwtproject.event</groupId>
+            <groupId>org.jresearch.gwtproject.event</groupId>
             <artifactId>gwt-event</artifactId>
         </dependency>
         <!-- <dependency>

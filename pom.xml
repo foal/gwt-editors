@@ -47,14 +47,15 @@
   </scm>
 
     <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <!-- <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.build.outputEncoding>UTF-8</project.build.outputEncoding>
 
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
 
         <gwt.version>2.8.2</gwt.version>
-        <plugin.source.version>2.4</plugin.source.version>
+        <plugin.source.version>2.4</plugin.source.version> -->
+        <gwt-event.ver>1.0.1-SNAPSHOT</gwt-event.ver>
     </properties>
 
     <dependencyManagement>
@@ -71,15 +72,15 @@
                 <version>${gwt.version}</version>
                 <scope>test</scope>
             </dependency> -->
-            <dependency>
+            <!-- <dependency>
                 <groupId>org.gwtproject.dom</groupId>
                 <artifactId>gwt-dom</artifactId>
                 <version>1.0-SNAPSHOT</version>
-            </dependency>
+            </dependency> -->
             <dependency>
-                <groupId>org.gwtproject.event</groupId>
+                <groupId>org.jresearch.gwtproject.event</groupId>
                 <artifactId>gwt-event</artifactId>
-                <version>HEAD-SNAPSHOT</version>
+                <version>${gwt-event.ver}</version>
             </dependency>
             <!-- <dependency>
                 <groupId>org.gwtproject.event</groupId>
