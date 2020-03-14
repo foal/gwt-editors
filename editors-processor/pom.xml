@@ -68,7 +68,7 @@
             <optional>true</optional>
         </dependency> -->
 		<dependency>
-			<groupId>org.gwtproject</groupId>
+			<groupId>org.jresearch.gwtproject</groupId>
 			<artifactId>editors</artifactId>
 			<version>${project.version}</version>
 		</dependency>
